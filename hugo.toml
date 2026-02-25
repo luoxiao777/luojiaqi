@@ -1,16 +1,3 @@
 baseURL = 'https://luoxiao777.github.io/luojiaqi/'
-defaultContentLanguage = 'zh'
-defaultContentLanguageInSubdir = true
-
-[languages]
-  [languages.zh]
-    languageName = '简体中文'
-    languageCode = 'zh-cn'
-    weight = 1
-    title = '我的新 Hugo 网站'
-
-  [languages.en]
-    languageName = 'English'
-    languageCode = 'en-us'
-    weight = 2
-    title = 'My New Hugo Site'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
