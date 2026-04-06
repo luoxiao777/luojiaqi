@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on luo portfolio</title>
+    <link>http://localhost:1313/luojiaqi/</link>
+    <description>Recent content in About on luo portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/luojiaqi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ELIXIR31012</title>
+      <link>http://localhost:1313/luojiaqi/projects/elixir31012/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/elixir31012/</guid>
+      <description>伦敦配饰品牌视觉与包装设计</description>
+    </item>
+    <item>
+      <title>CYPHER BARBERSHOP</title>
+      <link>http://localhost:1313/luojiaqi/projects/cypher-barbershop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/cypher-barbershop/</guid>
+      <description>LOGO 与延展应用 / 物料设计</description>
+    </item>
+    <item>
+      <title>ELEVATOR CLUB</title>
+      <link>http://localhost:1313/luojiaqi/projects/elevator-club/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/elevator-club/</guid>
+      <description>海报设计 / Poster Design</description>
+    </item>
+    <item>
+      <title>LAARVEE · SINNGOUKI</title>
+      <link>http://localhost:1313/luojiaqi/projects/laarvee-sinngouki/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/laarvee-sinngouki/</guid>
+      <description>SINNGOUKI 系列部分宣传物料</description>
+    </item>
+    <item>
+      <title>供养人档案 / Donor Archives</title>
+      <link>http://localhost:1313/luojiaqi/projects/donor-archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/donor-archives/</guid>
+      <description>艺术遗产线研究写作与概念梳理</description>
+    </item>
+    <item>
+      <title>寿县豆淇淋品牌 / Shouxian Soymilk Ice Cream</title>
+      <link>http://localhost:1313/luojiaqi/projects/shouxian-soymilk-icecream/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/shouxian-soymilk-icecream/</guid>
+      <description>豆乳冰淇淋品牌视觉</description>
+    </item>
+    <item>
+      <title>春来和</title>
+      <link>http://localhost:1313/luojiaqi/projects/chunlaihe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/chunlaihe/</guid>
+      <description>老字号酒楼品牌设计及策划</description>
+    </item>
+    <item>
+      <title>果皮书店 / KPEE BOOKS</title>
+      <link>http://localhost:1313/luojiaqi/projects/guopi-books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/guopi-books/</guid>
+      <description>书店 LOGO 与书籍设计 / 诗集排版</description>
+    </item>
+    <item>
+      <title>草池湾朱鹮小村</title>
+      <link>http://localhost:1313/luojiaqi/projects/caochiwan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/caochiwan/</guid>
+      <description>园区手册 / 包装 / 活动海报等物料设计</description>
+    </item>
+    <item>
+      <title>高能面料士多 / Fabric Store</title>
+      <link>http://localhost:1313/luojiaqi/projects/gaoneng-fabric-store/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/luojiaqi/projects/gaoneng-fabric-store/</guid>
+      <description>物料 / 视觉设计</description>
+    </item>
+  </channel>
+</rss>

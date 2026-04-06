@@ -1,3 +1,46 @@
 baseURL = 'https://luoxiao777.github.io/luojiaqi/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'luo portfolio'
+defaultContentLanguage = 'zh'
+defaultContentLanguageInSubdir = true
+
+[menu]
+  [[menu.main]]
+    name = 'About'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Projects'
+    url = '/projects/'
+    weight = 2
+
+[languages]
+  [languages.zh]
+    languageName = 'ZH'
+    languageCode = 'zh-cn'
+    weight = 1
+    title = 'luo portfolio'
+
+  [languages.en]
+    languageName = 'EN'
+    languageCode = 'en-us'
+    weight = 2
+    title = 'luo portfolio'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+disableKinds = ['taxonomy', 'term']
+taxonomies = {}
+
+# Projects page top sheet (2×3). Change these anytime.
+[params]
+  contactEmail = '2714404485@qq.com'
+  contactInstagramURL = 'https://www.instagram.com/_niming?igsh=MTR5YzYwbjlzc3N4aQ=='
+  contactInstagramLabel = '@_niming'
+  contactLocation = "Xi'an, China"
+  contactLastUpdated = '2026/4'
+  # About page image
+  aboutPhoto = 'images/luo_logo.png'

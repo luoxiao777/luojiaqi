@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects - luo portfolio</title>
+  
+  <link rel="stylesheet" href="/luojiaqi/css/style.css">
+</head>
+<body>
+  <header class="top-header">
+    <nav class="top-nav">
+      <div class="nav-container">
+        
+        
+        <div class="nav-center">
+          <a href="/luojiaqi/en/" class="nav-link">About</a>
+          <a href="/luojiaqi/en/projects/" class="nav-link">Projects</a>
+        </div>
+        <div class="nav-lang">
+          
+            <a
+              href="/luojiaqi/zh/"
+              class="nav-lang-link"
+            >
+              ZH
+            </a>
+          
+            <a
+              href="/luojiaqi/en/"
+              class="nav-lang-link nav-lang-link-active"
+            >
+              EN
+            </a>
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    
+<div class="projects-split">
+  <section class="projects-detail-pane" aria-live="polite">
+    <div id="project-detail" class="project-detail-placeholder"></div>
+  </section>
+
+  <aside class="projects-list-pane">
+    <ol class="projects-title-list">
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/elixir31012/" data-project-url="/luojiaqi/en/projects/elixir31012/">
+          ELIXIR31012
+        </a>
+        <div class="project-meta">2025</div>
+        <div class="project-summary">Visual identity and packaging for a London-based accessories brand</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/caochiwan/" data-project-url="/luojiaqi/en/projects/caochiwan/">
+          Caochiwan Crested Ibis Village
+        </a>
+        <div class="project-meta">2023</div>
+        <div class="project-summary">Visual materials for Caochiwan village and its crested ibis conservation project</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/chunlaihe/" data-project-url="/luojiaqi/en/projects/chunlaihe/">
+          Chun Lai He Restaurant
+        </a>
+        <div class="project-meta">2023</div>
+        <div class="project-summary">Branding and visual system for a time‑honoured restaurant</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/cypher-barbershop/" data-project-url="/luojiaqi/en/projects/cypher-barbershop/">
+          CYPHER BARBERSHOP
+        </a>
+        <div class="project-meta">2022</div>
+        <div class="project-summary">Logo system and visual materials for a community‑driven barbershop</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/donor-archives/" data-project-url="/luojiaqi/en/projects/donor-archives/">
+          Donor Archives
+        </a>
+        <div class="project-meta">2023</div>
+        <div class="project-summary">Research‑driven publication on donor figures in Chinese and Western painting</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/elevator-club/" data-project-url="/luojiaqi/en/projects/elevator-club/">
+          ELEVATOR CLUB
+        </a>
+        <div class="project-meta">2022</div>
+        <div class="project-summary">Poster series for a dance‑focused basement club in Shanghai</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/gaoneng-fabric-store/" data-project-url="/luojiaqi/en/projects/gaoneng-fabric-store/">
+          Gaoneng Fabric Store
+        </a>
+        <div class="project-meta">2023</div>
+        <div class="project-summary">Identity and collateral for a high‑energy fabric store concept</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/guopi-books/" data-project-url="/luojiaqi/en/projects/guopi-books/">
+          KPEE BOOKS
+        </a>
+        <div class="project-meta">2021</div>
+        <div class="project-summary">Bookstore logo, book design and poetry collection layout</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/laarvee-sinngouki/" data-project-url="/luojiaqi/en/projects/laarvee-sinngouki/">
+          LAARVEE · SINNGOUKI
+        </a>
+        <div class="project-meta">2024</div>
+        <div class="project-summary">Campaign visuals for the SINNGOUKI watch series</div>
+      </li>
+      
+      <li class="projects-title-item">
+        <a class="project-title-link" href="/luojiaqi/en/projects/shouxian-soymilk-icecream/" data-project-url="/luojiaqi/en/projects/shouxian-soymilk-icecream/">
+          Shouxian Soymilk Ice Cream
+        </a>
+        <div class="project-meta">2025</div>
+        <div class="project-summary">Brand visuals for a soymilk ice cream line from Shouxian</div>
+      </li>
+      
+    </ol>
+  </aside>
+</div>
+
+<div id="detail-lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-close" id="detail-lightbox-close">×</div>
+  <button id="detail-lightbox-prev" class="lightbox-nav-btn" aria-label="Previous image">‹</button>
+  <img id="detail-lightbox-img" src="" alt="">
+  <button id="detail-lightbox-next" class="lightbox-nav-btn" aria-label="Next image">›</button>
+</div>
+
+<script>
+(() => {
+  const detail = document.getElementById('project-detail');
+  const links = Array.from(document.querySelectorAll('a.project-title-link[data-project-url]'));
+  const box = document.getElementById('detail-lightbox');
+  const img = document.getElementById('detail-lightbox-img');
+  const closeBtn = document.getElementById('detail-lightbox-close');
+  const prevBtn = document.getElementById('detail-lightbox-prev');
+  const nextBtn = document.getElementById('detail-lightbox-next');
+  let gallery = [];
+  let currentIndex = -1;
+  if (!detail || links.length === 0) return;
+
+  const openLightbox = (index) => {
+    if (!box || !img || gallery.length === 0) return;
+    if (index < 0 || index >= gallery.length) return;
+    currentIndex = index;
+    img.src = gallery[currentIndex];
+    box.classList.add('active');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeLightbox = () => {
+    if (!box || !img) return;
+    box.classList.remove('active');
+    box.setAttribute('aria-hidden', 'true');
+    img.src = '';
+    document.body.style.overflow = '';
+  };
+
+  const wireDetailLightbox = () => {
+    const galleryLinks = Array.from(detail.querySelectorAll('a[data-lightbox="1"]'));
+    gallery = galleryLinks.map(a => a.getAttribute('href'));
+    galleryLinks.forEach((a, idx) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        openLightbox(idx);
+      });
+    });
+  };
+
+  closeBtn && closeBtn.addEventListener('click', closeLightbox);
+  box && box.addEventListener('click', (e) => { if (e.target === box) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!box || box.getAttribute('aria-hidden') === 'true') return;
+    if (e.key === 'Escape') {
+      closeLightbox();
+    } else if (e.key === 'ArrowLeft' && currentIndex > 0) {
+      openLightbox(currentIndex - 1);
+    } else if (e.key === 'ArrowRight' && currentIndex < gallery.length - 1) {
+      openLightbox(currentIndex + 1);
+    }
+  });
+
+  prevBtn && prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex > 0) openLightbox(currentIndex - 1);
+  });
+  nextBtn && nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex < gallery.length - 1) openLightbox(currentIndex + 1);
+  });
+
+  const setActive = (url) => {
+    links.forEach(a => a.classList.toggle('active', a.getAttribute('data-project-url') === url));
+  };
+
+  const loadProject = async (url, { pushState = true } = {}) => {
+    try {
+      setActive(url);
+      detail.innerHTML = '<p class="project-meta">Loading…</p>';
+
+      const res = await fetch(url, { headers: { 'X-Requested-With': 'fetch' } });
+      if (!res.ok) throw new Error('fetch failed');
+      const html = await res.text();
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const article = doc.querySelector('article.project-detail');
+      if (!article) throw new Error('missing article');
+
+      
+      const h1 = article.querySelector('h1');
+      if (h1) h1.remove();
+      const meta = article.querySelector('.project-meta');
+      if (meta) meta.remove();
+
+      
+      detail.innerHTML = '';
+      detail.appendChild(article);
+      wireDetailLightbox();
+
+      if (pushState) history.pushState({ url }, '', url);
+    } catch (e) {
+      
+      window.location.href = url;
+    }
+  };
+
+  links.forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      loadProject(a.getAttribute('data-project-url'));
+    });
+  });
+
+  window.addEventListener('popstate', (e) => {
+    const url = (e.state && e.state.url) ? e.state.url : null;
+    if (url) loadProject(url, { pushState: false });
+  });
+})();
+</script>
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="#top">[ BACK TO TOP ]</a>
+  </footer>
+</body>
+</html>
+

@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>welcome / 欢迎</title>
-</head>
-<body>
-  <h1>welcome / 欢迎</h1>
-</body>
-</html>
+{{ define "main" }}
+{{ $photo := site.Params.aboutPhoto | default "images/about/portrait.jpg" }}
+{{ $staticPath := printf "static/%s" $photo }}
+{{ $email := site.Params.contactEmail | default "2714404485@qq.com" }}
+{{ $ig := site.Params.contactInstagramURL | default "https://www.instagram.com/_niming/" }}
+{{ $igLabel := site.Params.contactInstagramLabel | default "@_niming" }}
+{{ $loc := site.Params.contactLocation | default "Xi'an, China" }}
+{{ $updated := site.Params.contactLastUpdated | default "2026/4" }}
+<div class="projects-sheet" aria-label="{{ if eq .Site.Language.Lang "zh" }}联系与更新信息{{ else }}Contact and update info{{ end }}">
+  <div class="projects-sheet__grid">
+    <div class="projects-sheet__cell projects-sheet__cell--head">
+      {{ if eq .Site.Language.Lang "zh" }}邮箱、Instagram{{ else }}Email, Instagram{{ end }}
+    </div>
+    <div class="projects-sheet__cell projects-sheet__cell--head">
+      {{ if eq .Site.Language.Lang "zh" }}地点{{ else }}Location{{ end }}
+    </div>
+    <div class="projects-sheet__cell projects-sheet__cell--head">
+      {{ if eq .Site.Language.Lang "zh" }}上次更新{{ else }}Last Updated{{ end }}
+    </div>
+    <div class="projects-sheet__cell projects-sheet__cell--value">
+      <a class="projects-sheet__link" href="mailto:{{ $email }}">{{ $email }}</a>
+      <span class="projects-sheet__sep" aria-hidden="true"> · </span>
+      <a class="projects-sheet__link" href="{{ $ig }}" rel="noopener noreferrer" target="_blank">{{ $igLabel }}</a>
+    </div>
+    <div class="projects-sheet__cell projects-sheet__cell--value">{{ $loc }}</div>
+    <div class="projects-sheet__cell projects-sheet__cell--value">{{ $updated }}</div>
+  </div>
+</div>
+<div class="home home--split">
+  <aside class="home__photo">
+    {{ if fileExists $staticPath }}
+      <img class="home__photo-img" src="{{ $photo | relURL }}" alt="{{ .Title }}" decoding="async">
+    {{ else }}
+      <div class="home__photo-placeholder" role="img" aria-label="{{ if eq .Site.Language.Lang "zh" }}个人照片位置{{ else }}Portrait placeholder{{ end }}"></div>
+    {{ end }}
+  </aside>
+  <div class="home__content">
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

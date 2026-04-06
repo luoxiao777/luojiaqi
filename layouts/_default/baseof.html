@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+  {{ $style := resources.Get "css/style.css" }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+</head>
+<body>
+  <header class="top-header">
+    <nav class="top-nav">
+      <div class="nav-container">
+        {{ $base := "/luojiaqi" }}
+        {{ $lang := .Site.Language.Lang }}
+        <div class="nav-center">
+          <a href="{{ printf "%s/%s/" $base $lang }}" class="nav-link">About</a>
+          <a href="{{ printf "%s/%s/projects/" $base $lang }}" class="nav-link">Projects</a>
+        </div>
+        <div class="nav-lang">
+          {{ range .Site.Languages }}
+            <a
+              href="{{ printf "%s/%s/" $base .Lang }}"
+              class="nav-lang-link{{ if eq $.Site.Language.Lang .Lang }} nav-lang-link-active{{ end }}"
+            >
+              {{ .LanguageName }}
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <a href="#top">[ BACK TO TOP ]</a>
+  </footer>
+
+  {{ partial "lightbox.html" . }}
+</body>
+</html>
+

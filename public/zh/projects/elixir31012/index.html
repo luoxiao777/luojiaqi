@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ELIXIR31012 - luo portfolio</title>
+  
+  <link rel="stylesheet" href="/luojiaqi/css/style.css">
+</head>
+<body>
+  <header class="top-header">
+    <nav class="top-nav">
+      <div class="nav-container">
+        
+        
+        <div class="nav-center">
+          <a href="/luojiaqi/zh/" class="nav-link">About</a>
+          <a href="/luojiaqi/zh/projects/" class="nav-link">Projects</a>
+        </div>
+        <div class="nav-lang">
+          
+            <a
+              href="/luojiaqi/zh/"
+              class="nav-lang-link nav-lang-link-active"
+            >
+              ZH
+            </a>
+          
+            <a
+              href="/luojiaqi/en/"
+              class="nav-lang-link"
+            >
+              EN
+            </a>
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    
+<article class="project-detail">
+  
+  
+
+  
+    
+    
+      
+      
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+  
+
+  
+  <div class="gallery gallery--cols-2" data-gallery="true">
+    
+    <a class="gallery-item" href="/luojiaqi/images/elixir012/01.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/elixir012/01.jpg" alt="ELIXIR31012" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/elixir012/02.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/elixir012/02.jpg" alt="ELIXIR31012" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/elixir012/03.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/elixir012/03.jpg" alt="ELIXIR31012" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/elixir012/04.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/elixir012/04.jpg" alt="ELIXIR31012" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/elixir012/05.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/elixir012/05.jpg" alt="ELIXIR31012" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/elixir012/06.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/elixir012/06.jpg" alt="ELIXIR31012" loading="lazy" decoding="async">
+    </a>
+    
+  </div>
+  
+
+  <div class="project-content">
+    <h2 id="关于项目">关于项目</h2>
+<p>ELIXIR31012 于 2023 年在伦敦创立。本次项目主要负责 LOGO 设计更新以及延展应用和包装。两位来自英国皇家艺术学院的跨领域艺术家创立，由 3D 艺术家徐婧与声音艺术家夏己韫共同打造，两位设计师深耕时尚设计，将拟动画、声音艺术、可穿戴装置和表演等多媒体元素融合到品牌中，通过探讨后人类主义、神秘主义与地下俱乐部文化之间的关系。</p>
+<p>品牌核心理念在于探讨身体、意识与时空的边界，通过想像力与新媒体技术来突破这些界限，根植于青年亚文化群体，通过时尚配饰设计和新媒体艺术，传递出当下 Z 世代青年敢于冒险的创新精神。</p>
+
+  </div>
+</article>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="#top">[ BACK TO TOP ]</a>
+  </footer>
+
+  <div id="site-lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-close" id="site-lightbox-close" role="button" tabindex="0" aria-label="Close">×</div>
+  <button type="button" id="site-lightbox-prev" class="lightbox-nav-btn lightbox-nav-btn--prev" aria-label="Previous image">‹</button>
+  <img id="site-lightbox-img" src="" alt="">
+  <button type="button" id="site-lightbox-next" class="lightbox-nav-btn lightbox-nav-btn--next" aria-label="Next image">›</button>
+</div>
+<script>
+(() => {
+  const box = document.getElementById('site-lightbox');
+  const img = document.getElementById('site-lightbox-img');
+  const closeBtn = document.getElementById('site-lightbox-close');
+  const prevBtn = document.getElementById('site-lightbox-prev');
+  const nextBtn = document.getElementById('site-lightbox-next');
+  if (!box || !img) return;
+
+  let gallery = [];
+  let currentIndex = -1;
+
+  const scopeFor = (anchor) =>
+    anchor.closest('article.project-showcase') ||
+    anchor.closest('article.project-detail') ||
+    document.body;
+
+  const collect = (anchor) => {
+    const scope = scopeFor(anchor);
+    return Array.from(scope.querySelectorAll('a[data-lightbox="1"]')).map((a) => a.getAttribute('href'));
+  };
+
+  const openAt = (anchor) => {
+    gallery = collect(anchor);
+    const links = Array.from(scopeFor(anchor).querySelectorAll('a[data-lightbox="1"]'));
+    const idx = links.indexOf(anchor);
+    if (idx < 0 || gallery.length === 0) return;
+    currentIndex = idx;
+    img.src = gallery[currentIndex];
+    const anchorImg = anchor.querySelector('img');
+    img.alt = (anchorImg && anchorImg.getAttribute('alt')) || '';
+    box.classList.add('active');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    box.classList.remove('active');
+    box.setAttribute('aria-hidden', 'true');
+    img.src = '';
+    img.alt = '';
+    document.body.style.overflow = '';
+    currentIndex = -1;
+    gallery = [];
+  };
+
+  const show = (index) => {
+    if (index < 0 || index >= gallery.length) return;
+    currentIndex = index;
+    img.src = gallery[currentIndex];
+  };
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[data-lightbox="1"]');
+    if (!a) return;
+    e.preventDefault();
+    openAt(a);
+  });
+
+  closeBtn && closeBtn.addEventListener('click', close);
+  closeBtn && closeBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      close();
+    }
+  });
+  box.addEventListener('click', (e) => {
+    if (e.target === box) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (box.getAttribute('aria-hidden') === 'true') return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft' && currentIndex > 0) show(currentIndex - 1);
+    else if (e.key === 'ArrowRight' && currentIndex < gallery.length - 1) show(currentIndex + 1);
+  });
+
+  prevBtn && prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex > 0) show(currentIndex - 1);
+  });
+  nextBtn && nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex < gallery.length - 1) show(currentIndex + 1);
+  });
+})();
+</script>
+
+</body>
+</html>
+

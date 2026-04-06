@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>供养人档案 / Donor Archives - luo portfolio</title>
+  
+  <link rel="stylesheet" href="/luojiaqi/css/style.css">
+</head>
+<body>
+  <header class="top-header">
+    <nav class="top-nav">
+      <div class="nav-container">
+        
+        
+        <div class="nav-center">
+          <a href="/luojiaqi/zh/" class="nav-link">About</a>
+          <a href="/luojiaqi/zh/projects/" class="nav-link">Projects</a>
+        </div>
+        <div class="nav-lang">
+          
+            <a
+              href="/luojiaqi/zh/"
+              class="nav-lang-link nav-lang-link-active"
+            >
+              ZH
+            </a>
+          
+            <a
+              href="/luojiaqi/en/"
+              class="nav-lang-link"
+            >
+              EN
+            </a>
+          
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    
+<article class="project-detail">
+  
+  
+
+  
+    
+    
+      
+      
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+      
+      
+      
+        
+        
+        
+      
+    
+  
+
+  
+  <div class="gallery gallery--cols-2" data-gallery="true">
+    
+    <a class="gallery-item" href="/luojiaqi/images/donor-archives/01.png" data-lightbox="1">
+      <img src="/luojiaqi/images/donor-archives/01.png" alt="供养人档案 / Donor Archives" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/donor-archives/02.png" data-lightbox="1">
+      <img src="/luojiaqi/images/donor-archives/02.png" alt="供养人档案 / Donor Archives" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/donor-archives/03.png" data-lightbox="1">
+      <img src="/luojiaqi/images/donor-archives/03.png" alt="供养人档案 / Donor Archives" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/donor-archives/04.png" data-lightbox="1">
+      <img src="/luojiaqi/images/donor-archives/04.png" alt="供养人档案 / Donor Archives" loading="lazy" decoding="async">
+    </a>
+    
+    <a class="gallery-item" href="/luojiaqi/images/donor-archives/05.png" data-lightbox="1">
+      <img src="/luojiaqi/images/donor-archives/05.png" alt="供养人档案 / Donor Archives" loading="lazy" decoding="async">
+    </a>
+    
+  </div>
+  
+
+  <div class="project-content">
+    <h2 id="关于项目">关于项目</h2>
+<p>《供养人档案》是对绘画中供体形象演变的简要描述——以隋朝、唐朝、中国五代时期和西班牙文艺复兴时期绘画中的捐赠者形象为例。主要作为艺术遗产线理论研究、分析、概念、批评和传播相关工作的提交。</p>
+<p>作者：王新惠</p>
+
+  </div>
+</article>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="#top">[ BACK TO TOP ]</a>
+  </footer>
+
+  <div id="site-lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-close" id="site-lightbox-close" role="button" tabindex="0" aria-label="Close">×</div>
+  <button type="button" id="site-lightbox-prev" class="lightbox-nav-btn lightbox-nav-btn--prev" aria-label="Previous image">‹</button>
+  <img id="site-lightbox-img" src="" alt="">
+  <button type="button" id="site-lightbox-next" class="lightbox-nav-btn lightbox-nav-btn--next" aria-label="Next image">›</button>
+</div>
+<script>
+(() => {
+  const box = document.getElementById('site-lightbox');
+  const img = document.getElementById('site-lightbox-img');
+  const closeBtn = document.getElementById('site-lightbox-close');
+  const prevBtn = document.getElementById('site-lightbox-prev');
+  const nextBtn = document.getElementById('site-lightbox-next');
+  if (!box || !img) return;
+
+  let gallery = [];
+  let currentIndex = -1;
+
+  const scopeFor = (anchor) =>
+    anchor.closest('article.project-showcase') ||
+    anchor.closest('article.project-detail') ||
+    document.body;
+
+  const collect = (anchor) => {
+    const scope = scopeFor(anchor);
+    return Array.from(scope.querySelectorAll('a[data-lightbox="1"]')).map((a) => a.getAttribute('href'));
+  };
+
+  const openAt = (anchor) => {
+    gallery = collect(anchor);
+    const links = Array.from(scopeFor(anchor).querySelectorAll('a[data-lightbox="1"]'));
+    const idx = links.indexOf(anchor);
+    if (idx < 0 || gallery.length === 0) return;
+    currentIndex = idx;
+    img.src = gallery[currentIndex];
+    const anchorImg = anchor.querySelector('img');
+    img.alt = (anchorImg && anchorImg.getAttribute('alt')) || '';
+    box.classList.add('active');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    box.classList.remove('active');
+    box.setAttribute('aria-hidden', 'true');
+    img.src = '';
+    img.alt = '';
+    document.body.style.overflow = '';
+    currentIndex = -1;
+    gallery = [];
+  };
+
+  const show = (index) => {
+    if (index < 0 || index >= gallery.length) return;
+    currentIndex = index;
+    img.src = gallery[currentIndex];
+  };
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[data-lightbox="1"]');
+    if (!a) return;
+    e.preventDefault();
+    openAt(a);
+  });
+
+  closeBtn && closeBtn.addEventListener('click', close);
+  closeBtn && closeBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      close();
+    }
+  });
+  box.addEventListener('click', (e) => {
+    if (e.target === box) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (box.getAttribute('aria-hidden') === 'true') return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft' && currentIndex > 0) show(currentIndex - 1);
+    else if (e.key === 'ArrowRight' && currentIndex < gallery.length - 1) show(currentIndex + 1);
+  });
+
+  prevBtn && prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex > 0) show(currentIndex - 1);
+  });
+  nextBtn && nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex < gallery.length - 1) show(currentIndex + 1);
+  });
+})();
+</script>
+
+</body>
+</html>
+
