@@ -13,6 +13,7 @@
       <div class="nav-container">
         
         
+        <a href="/luojiaqi/en/" class="nav-brand">LUO JIAQI</a>
         <div class="nav-center">
           <a href="/luojiaqi/en/" class="nav-link">About</a>
           <a href="/luojiaqi/en/projects/" class="nav-link">Projects</a>
@@ -102,54 +103,30 @@
   
 
   
-  <div class="gallery" data-gallery="true">
+  <div class="gallery gallery--cols-2" data-gallery="true">
     
-    <a
-      class="gallery-item"
-      href="/luojiaqi/images/chunlaihe/01.PNG"
-      data-lightbox="1"
-    >
-      <img src="/luojiaqi/images/chunlaihe/01.PNG" alt="Chun Lai He Restaurant" loading="lazy">
+    <a class="gallery-item" href="/luojiaqi/images/chunlaihe/01.PNG" data-lightbox="1">
+      <img src="/luojiaqi/images/chunlaihe/01.PNG" alt="Chun Lai He Restaurant" loading="lazy" decoding="async">
     </a>
     
-    <a
-      class="gallery-item gallery-item--hidden"
-      href="/luojiaqi/images/chunlaihe/02.png"
-      data-lightbox="1"
-    >
-      <img src="/luojiaqi/images/chunlaihe/02.png" alt="Chun Lai He Restaurant" loading="lazy">
+    <a class="gallery-item" href="/luojiaqi/images/chunlaihe/02.png" data-lightbox="1">
+      <img src="/luojiaqi/images/chunlaihe/02.png" alt="Chun Lai He Restaurant" loading="lazy" decoding="async">
     </a>
     
-    <a
-      class="gallery-item gallery-item--hidden"
-      href="/luojiaqi/images/chunlaihe/03.jpg"
-      data-lightbox="1"
-    >
-      <img src="/luojiaqi/images/chunlaihe/03.jpg" alt="Chun Lai He Restaurant" loading="lazy">
+    <a class="gallery-item" href="/luojiaqi/images/chunlaihe/03.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/chunlaihe/03.jpg" alt="Chun Lai He Restaurant" loading="lazy" decoding="async">
     </a>
     
-    <a
-      class="gallery-item gallery-item--hidden"
-      href="/luojiaqi/images/chunlaihe/04.jpg"
-      data-lightbox="1"
-    >
-      <img src="/luojiaqi/images/chunlaihe/04.jpg" alt="Chun Lai He Restaurant" loading="lazy">
+    <a class="gallery-item" href="/luojiaqi/images/chunlaihe/04.jpg" data-lightbox="1">
+      <img src="/luojiaqi/images/chunlaihe/04.jpg" alt="Chun Lai He Restaurant" loading="lazy" decoding="async">
     </a>
     
-    <a
-      class="gallery-item gallery-item--hidden"
-      href="/luojiaqi/images/chunlaihe/05.png"
-      data-lightbox="1"
-    >
-      <img src="/luojiaqi/images/chunlaihe/05.png" alt="Chun Lai He Restaurant" loading="lazy">
+    <a class="gallery-item" href="/luojiaqi/images/chunlaihe/05.png" data-lightbox="1">
+      <img src="/luojiaqi/images/chunlaihe/05.png" alt="Chun Lai He Restaurant" loading="lazy" decoding="async">
     </a>
     
-    <a
-      class="gallery-item gallery-item--hidden"
-      href="/luojiaqi/images/chunlaihe/06.png"
-      data-lightbox="1"
-    >
-      <img src="/luojiaqi/images/chunlaihe/06.png" alt="Chun Lai He Restaurant" loading="lazy">
+    <a class="gallery-item" href="/luojiaqi/images/chunlaihe/06.png" data-lightbox="1">
+      <img src="/luojiaqi/images/chunlaihe/06.png" alt="Chun Lai He Restaurant" loading="lazy" decoding="async">
     </a>
     
   </div>
@@ -171,6 +148,101 @@
   <footer class="site-footer">
     <a href="#top">[ BACK TO TOP ]</a>
   </footer>
+
+  <div id="site-lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox-close" id="site-lightbox-close" role="button" tabindex="0" aria-label="Close">×</div>
+  <button type="button" id="site-lightbox-prev" class="lightbox-nav-btn lightbox-nav-btn--prev" aria-label="Previous image">‹</button>
+  <img id="site-lightbox-img" src="" alt="">
+  <button type="button" id="site-lightbox-next" class="lightbox-nav-btn lightbox-nav-btn--next" aria-label="Next image">›</button>
+</div>
+<script>
+(() => {
+  const box = document.getElementById('site-lightbox');
+  const img = document.getElementById('site-lightbox-img');
+  const closeBtn = document.getElementById('site-lightbox-close');
+  const prevBtn = document.getElementById('site-lightbox-prev');
+  const nextBtn = document.getElementById('site-lightbox-next');
+  if (!box || !img) return;
+
+  let gallery = [];
+  let currentIndex = -1;
+
+  const scopeFor = (anchor) =>
+    anchor.closest('article.project-showcase') ||
+    anchor.closest('article.project-detail') ||
+    document.body;
+
+  const collect = (anchor) => {
+    const scope = scopeFor(anchor);
+    return Array.from(scope.querySelectorAll('a[data-lightbox="1"]')).map((a) => a.getAttribute('href'));
+  };
+
+  const openAt = (anchor) => {
+    gallery = collect(anchor);
+    const links = Array.from(scopeFor(anchor).querySelectorAll('a[data-lightbox="1"]'));
+    const idx = links.indexOf(anchor);
+    if (idx < 0 || gallery.length === 0) return;
+    currentIndex = idx;
+    img.src = gallery[currentIndex];
+    const anchorImg = anchor.querySelector('img');
+    img.alt = (anchorImg && anchorImg.getAttribute('alt')) || '';
+    box.classList.add('active');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const close = () => {
+    box.classList.remove('active');
+    box.setAttribute('aria-hidden', 'true');
+    img.src = '';
+    img.alt = '';
+    document.body.style.overflow = '';
+    currentIndex = -1;
+    gallery = [];
+  };
+
+  const show = (index) => {
+    if (index < 0 || index >= gallery.length) return;
+    currentIndex = index;
+    img.src = gallery[currentIndex];
+  };
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[data-lightbox="1"]');
+    if (!a) return;
+    e.preventDefault();
+    openAt(a);
+  });
+
+  closeBtn && closeBtn.addEventListener('click', close);
+  closeBtn && closeBtn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      close();
+    }
+  });
+  box.addEventListener('click', (e) => {
+    if (e.target === box) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (box.getAttribute('aria-hidden') === 'true') return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft' && currentIndex > 0) show(currentIndex - 1);
+    else if (e.key === 'ArrowRight' && currentIndex < gallery.length - 1) show(currentIndex + 1);
+  });
+
+  prevBtn && prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex > 0) show(currentIndex - 1);
+  });
+  nextBtn && nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex < gallery.length - 1) show(currentIndex + 1);
+  });
+})();
+</script>
+
 </body>
 </html>
 

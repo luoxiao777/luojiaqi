@@ -9,46 +9,18 @@
     <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://luoxiao777.github.io/luojiaqi/zh/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>供养人档案 / Donor Archives</title>
+      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/donor-archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/donor-archives/</guid>
+      <description>艺术遗产线研究写作与概念梳理</description>
+    </item>
+    <item>
       <title>ELIXIR31012</title>
       <link>https://luoxiao777.github.io/luojiaqi/zh/projects/elixir31012/</link>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/elixir31012/</guid>
       <description>伦敦配饰品牌视觉与包装设计</description>
-    </item>
-    <item>
-      <title>CYPHER BARBERSHOP</title>
-      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/cypher-barbershop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/cypher-barbershop/</guid>
-      <description>LOGO 与延展应用 / 物料设计</description>
-    </item>
-    <item>
-      <title>ELEVATOR CLUB</title>
-      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/elevator-club/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/elevator-club/</guid>
-      <description>海报设计 / Poster Design</description>
-    </item>
-    <item>
-      <title>LAARVEE · SINNGOUKI</title>
-      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/laarvee-sinngouki/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/laarvee-sinngouki/</guid>
-      <description>SINNGOUKI 系列部分宣传物料</description>
-    </item>
-    <item>
-      <title>草池湾朱鹮小村</title>
-      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/caochiwan/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/caochiwan/</guid>
-      <description>园区手册 / 包装 / 活动海报等物料设计</description>
-    </item>
-    <item>
-      <title>春来和</title>
-      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/chunlaihe/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/chunlaihe/</guid>
-      <description>老字号酒楼品牌设计及策划</description>
     </item>
     <item>
       <title>高能面料士多 / Fabric Store</title>
@@ -58,11 +30,39 @@
       <description>物料 / 视觉设计</description>
     </item>
     <item>
-      <title>供养人档案 / Donor Archives</title>
-      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/donor-archives/</link>
+      <title>CYPHER BARBERSHOP</title>
+      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/cypher-barbershop/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/donor-archives/</guid>
-      <description>艺术遗产线研究写作与概念梳理</description>
+      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/cypher-barbershop/</guid>
+      <description>LOGO 与延展应用 / 物料设计</description>
+    </item>
+    <item>
+      <title>草池湾朱鹮小村</title>
+      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/caochiwan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/caochiwan/</guid>
+      <description>园区手册 / 包装 / 活动海报等物料设计</description>
+    </item>
+    <item>
+      <title>LAARVEE · SINNGOUKI</title>
+      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/laarvee-sinngouki/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/laarvee-sinngouki/</guid>
+      <description>SINNGOUKI 系列部分宣传物料</description>
+    </item>
+    <item>
+      <title>春来和</title>
+      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/chunlaihe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/chunlaihe/</guid>
+      <description>老字号酒楼品牌设计及策划</description>
+    </item>
+    <item>
+      <title>ELEVATOR CLUB</title>
+      <link>https://luoxiao777.github.io/luojiaqi/zh/projects/elevator-club/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://luoxiao777.github.io/luojiaqi/zh/projects/elevator-club/</guid>
+      <description>海报设计 / Poster Design</description>
     </item>
     <item>
       <title>果皮书店 / KPEE BOOKS</title>
