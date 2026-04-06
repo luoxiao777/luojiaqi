@@ -13,6 +13,7 @@
       <div class="nav-container">
         {{ $base := "/luojiaqi" }}
         {{ $lang := .Site.Language.Lang }}
+        <a href="{{ printf "%s/%s/" $base $lang }}" class="nav-brand">LUO JIAQI</a>
         <div class="nav-center">
           <a href="{{ printf "%s/%s/" $base $lang }}" class="nav-link">About</a>
           <a href="{{ printf "%s/%s/projects/" $base $lang }}" class="nav-link">Projects</a>

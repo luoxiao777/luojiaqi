@@ -74,6 +74,17 @@ p { margin: 0 0 12px 0; }
   align-items: center;
 }
 
+.nav-brand {
+  margin-right: auto;
+  color: #f80303;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.nav-brand:hover {
+  color: #000000;
+}
+
 .nav-center {
   display: flex;
   gap: 28px;
@@ -126,6 +137,10 @@ p { margin: 0 0 12px 0; }
   gap: 36px;
   max-width: var(--max);
   margin: 0 auto;
+}
+
+.about-page {
+  display: block;
 }
 
 .home__photo {
@@ -531,6 +546,20 @@ p { margin: 0 0 12px 0; }
     gap: 20px;
   }
 
+  .about-page {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-page .home--split {
+    order: 1;
+  }
+
+  .about-page .about-sheet {
+    order: 2;
+    margin-top: 16px;
+  }
+
   .home__photo {
     flex: 0 0 auto;
     max-width: 100%;
@@ -581,6 +610,11 @@ p { margin: 0 0 12px 0; }
 
   .nav-container {
     justify-content: flex-start;
+  }
+
+  .nav-brand {
+    margin-right: 18px;
+    font-size: 12px;
   }
 
   .nav-center {

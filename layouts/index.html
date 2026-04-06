@@ -6,7 +6,8 @@
 {{ $igLabel := site.Params.contactInstagramLabel | default "@_niming" }}
 {{ $loc := site.Params.contactLocation | default "Xi'an, China" }}
 {{ $updated := site.Params.contactLastUpdated | default "2026/4" }}
-<div class="projects-sheet" aria-label="{{ if eq .Site.Language.Lang "zh" }}联系与更新信息{{ else }}Contact and update info{{ end }}">
+<div class="about-page">
+<div class="projects-sheet about-sheet" aria-label="{{ if eq .Site.Language.Lang "zh" }}联系与更新信息{{ else }}Contact and update info{{ end }}">
   <div class="projects-sheet__grid">
     <div class="projects-sheet__cell projects-sheet__cell--head">
       {{ if eq .Site.Language.Lang "zh" }}邮箱、Instagram{{ else }}Email, Instagram{{ end }}
@@ -37,5 +38,6 @@
   <div class="home__content">
     {{ .Content }}
   </div>
+</div>
 </div>
 {{ end }}
